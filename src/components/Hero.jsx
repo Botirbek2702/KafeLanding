@@ -25,6 +25,10 @@ export default function Hero() {
           muted
           loop
           playsInline
+          onEnded={(e) => {
+            e.target.currentTime = 0;
+            e.target.play();
+          }}
           className="w-full h-full object-cover object-center"
         />
         {/* Global dark overlay to ensure white text is always readable */}
