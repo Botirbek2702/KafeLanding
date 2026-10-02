@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-obsidian-950: #09090b;
+  --color-obsidian-900: #0e0e10;
+  --color-obsidian-850: #131315;
+  --color-obsidian-800: #1b1b1d;
+
+  --color-gold-300: #f5e197;
+  --color-gold-400: #e5c365;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b89428;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-cinzel: "Cinzel", serif;
+}
+
+* { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fff2cc 0%, #d4af37 50%, #aa820a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #f5e197 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 25px -8px rgba(212, 175, 55, 0.15);
+}
+.gold-border-glow:hover {
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.25);
+}
+
+.hero-radial-vignette {
+  background: radial-gradient(
+    circle at center,
+    rgba(14, 14, 16, 0.45) 0%,
+    rgba(14, 14, 16, 0.92) 80%,
+    #0e0e10 100%
+  );
+}
+
+.menu-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #d4af37;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Scrollbar hide for category tabs */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
